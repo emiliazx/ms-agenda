@@ -45,7 +45,7 @@ class AgendaServiceTest {
     @InjectMocks
     private AgendaService agendaService;
 
-    // ---------- Horarios ----------
+   
 
     @Test
     void listarHorarios_debeRetornarHorariosActivos() {
@@ -144,7 +144,7 @@ class AgendaServiceTest {
                 .isInstanceOf(NoSuchElementException.class);
     }
 
-    // ---------- Festivos ----------
+   
 
     @Test
     void listarFestivos_debeRetornarOrdenados() {
@@ -207,7 +207,7 @@ class AgendaServiceTest {
         verify(festivoRepo, never()).deleteById(any());
     }
 
-    // ---------- Bloqueos ----------
+    
 
     @Test
     void listarBloqueos_conRango_debeFiltrarPorFechas() {
@@ -269,7 +269,7 @@ class AgendaServiceTest {
                 .isInstanceOf(NoSuchElementException.class);
     }
 
-    // ---------- obtenerDisponibilidad ----------
+  
 
     @Test
     void obtenerDisponibilidad_diaFestivo_debeRetornarNoDisponible() {
@@ -364,7 +364,7 @@ class AgendaServiceTest {
         assertThat(resultado.isDisponible()).isFalse();
     }
 
-    // ---------- obtenerDisponibilidadRango ----------
+   
 
     @Test
     void obtenerDisponibilidadRango_debeRetornarUnaEntradaPorDia() {
